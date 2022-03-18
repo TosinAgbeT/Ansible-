@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# INSTRUCTIONS: Edit the following placeholder command and output filepaths
+# For example: cpu_usage_tool > ~/backups/cpuuse/cpu_usage.txt
+# The cpu_usage_tool is the command and ~/backups/cpuuse/cpu_usage.txt is the f$
+# In the above example, the `cpu_usage_tool` command will output CPU usage info$
+# Do not forget to use the -h option for free memory, disk usage, and free disk$
+#show free memory
+#free -m > ~/backups/freemem/free_mem.txt
+
+#show disk usage
+#df -h > ~/backups/diskuse/disk_usage.txt
+#show open file list
+#lsof > ~/backups/openlist/open_list.txt
+
+#show free disk space
+#df -ah > ~/backups/freedisk/free_disk.txt
+
+files=('/etc/passwd' '/etc/shadow')
+for file in ${files[@]}
+do
+ls -l $file >> $output
+done
